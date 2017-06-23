@@ -4,6 +4,7 @@ namespace CAC\AppBoy\Api;
 
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\ClientInterface;
+use GuzzleHttp\Exception\RequestException;
 
 class AppBoyApi
 {
@@ -41,9 +42,19 @@ class AppBoyApi
             json_encode($params)
         );
 
-        $response = $this->guzzle->send($request);
+        try {
+          $response = $this->guzzle->send($request);
+        } catch (RequestException $e) {
+            $exception = new AppBoyException('API Exception', $e->getCode());
 
-        return json_decode($response->getBody()->getContents());
+            if ($e->getResponse()) {
+                $exception->setContent(json_decode($e->getResponse()->getBody(), true));
+            }
+
+            throw $exception;
+        }
+
+        return json_decode($response->getBody()->getContents(), true);
     }
 
     /**
