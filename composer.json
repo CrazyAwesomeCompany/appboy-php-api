@@ -1,34 +1,33 @@
 {
-    "name" : "cac/appboy-php-api",
-    "description" : "AppBoy API PHP integration",
-    "keywords" : [
-        "AppBoy",
-        "api",
-        "email"
-    ],
-    "homepage" : "http://www.crazyawesomecompany.com",
-    "license" : "GPL-3.0",
-    "support" : {
-        "issues" : "https://github.com/CrazyAwesomeCompany/appboy-php-api/issues",
-        "source" : "https://github.com/CrazyAwesomeCompany/appboy-php-api"
-    },
-    "autoload" : {
-        "psr-4" : {
-            "CAC\\AppBoy\\Api" : "lib/"
-        },
-        "classmap" : [
-            "lib/"
-        ]
-    },
-    "require" : {
-        "guzzlehttp/guzzle" : "^6.2"
-    },
-    "authors" : [
-        {
-            "name" : "Nick de Groot",
-            "email" : "nick@crazyawesomecompany.com",
-            "homepage" : "http://www.crazyawesomecompany.com",
-            "role" : "Developer"
-        }
-    ]
+	"name" : "cac/appboy-php-api",
+	"description" : "AppBoy API PHP integration",
+	"keywords" : [
+		"AppBoy",
+		"api",
+		"email"
+	],
+	"homepage" : "http://www.crazyawesomecompany.com",
+	"license" : "GPL-3.0",
+	"support" : {
+		"issues" : "https://github.com/CrazyAwesomeCompany/appboy-php-api/issues",
+		"source" : "https://github.com/CrazyAwesomeCompany/appboy-php-api"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"CAC\\AppBoy\\Api\\" : "lib/"
+		},
+		"classmap" : [
+			"lib/"
+		]
+	},
+	"require" : {
+		"guzzlehttp/guzzle" : "^6.2"
+	},
+	"authors" : [{
+			"name" : "Nick de Groot",
+			"email" : "nick@crazyawesomecompany.com",
+			"homepage" : "http://www.crazyawesomecompany.com",
+			"role" : "Developer"
+		}
+	]
 }
